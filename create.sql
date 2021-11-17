@@ -1,3 +1,6 @@
+create database Customers;
+go
+
 use Customers;
 
 create table Customer(
@@ -21,3 +24,4 @@ create table [Address](
 	[State] nvarchar(20) not null constraint country_name_cc check ([State] in ('United States', 'Canada')),
 	CONSTRAINT FK_Address_Customer FOREIGN KEY (CustomerId) references Customer (CustomerId)
 );
+
